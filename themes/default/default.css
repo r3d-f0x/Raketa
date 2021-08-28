@@ -25,4 +25,45 @@ a {
 
 #pageFooter {
 	margin-left: auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: #222;
+	overflow: hidden;
+}
+
+.column-float-left {
+	float:  left;
+}
+
+.column-float-right {
+	float: right;
+}
+
+#footerColLeft {
+	width:  75px;
+	padding-right: 15px;
+}
+
+#footerColRight {
+	vertical-align: top;
+	width:  40%;
+}
+
+#pwrByLine {
+	font-size:  21pt;
+}
+
+#crtByLine {
+	font-size: 11pt;
+}
+
+#dwnFromLine {
+	font-size: 14pt;
+}
+
+.footerColP {
+	font-size: 10pt;
+	line-height: 105%;
 }

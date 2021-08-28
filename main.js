@@ -35,6 +35,9 @@ cgDocHead.appendChild(cgCssLink);
 // Add the site name to #titleHeading at the top of the page
 document.getElementById('titleHeading').innerHTML = cgSitename;
 
+// Insert homepage link
+document.getElementById('topHomeLink').innerHTML = '<a href="' + cgWebPath + '">' + cgHomeLinkText + '</a>';
+
 // This function generates the homepage of the site
 function generateHomepage() {
     var rawList = httpGet('sysmsg/AllPages.dat');
@@ -49,7 +52,21 @@ function generatePage(pageTitle) {
 }
 
 // Add page footer
-var cgPageFooter = 'Footer';
+var cgPageFooter = '<div id="footerColLeft" class="column-float-left">\
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Rocket-icon.svg"></img>\
+    </div>\
+    <div class="column-float-left">\
+    <span id="pwrByLine">Powered by Raketa</span><br>\
+    <span id="crtByLine">Created by r3d_f0x and contributors</span><br>\
+    <span id="dwnFromLine"><a href="https://github.com/r3d-f0x/Raketa">Download from Github to power your own creation!\
+    </a></span>\
+    </div>\
+    <div id="footerColRight" class="column-float-right">\
+    <p class="footerColP">Raketa is a powerful tool to easily create your websites using markdown.  It operates \
+    entirely on client-side scripting and coding languages to allow you to take advantage of reliable \
+    free hosting platforms.</p>\
+    </div>\
+    ';
 document.getElementById('pageFooter').innerHTML = cgPageFooter;
 
 

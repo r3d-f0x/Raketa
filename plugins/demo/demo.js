@@ -1,0 +1,1 @@
+document.getElementById('pageFooter').appendChild('<p>This is a demo plugin.</p>');
