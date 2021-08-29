@@ -1,11 +1,11 @@
 body {
-	background-color:  #111;
+	background-color:  #0f0f12;
 	color:  #ccc;
 	font-family: sans-serif;
 }
 
 #mainColumn {
-	background-color:  #333;
+	background-color:  #262730;
 	width:  900px;
 	margin-left:  auto;
 	margin-right:  auto;
@@ -29,7 +29,7 @@ a {
 	padding-bottom: 10px;
 	padding-left: 10px;
 	padding-right: 10px;
-	background-color: #222;
+	background-color: #1d1e21;
 	overflow: hidden;
 }
 

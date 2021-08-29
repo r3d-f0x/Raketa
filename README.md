@@ -21,12 +21,19 @@ Download the files for Raketa to the location of your site.  In the root of the 
 At a minimum you should define the following variables:
 
 `cgSitename = 'Your site name';`
+
 `cgOwner = 'Your name or username';`
+
 `cgCopyrightYear = '2021';`
+
+It is also advisable to change the home page since it could be overwritten depending on how you update your site.
+
+`cgHomepageTitle = 'home';`
 
 ## Known issues
 
 * Sometimes when loading the page there is a bug where the default value of variables is displayed instead of the configured value.
+* `cgCopyright` is automatically reset in `main.js` since 
 
 ## Customizing Raketa
 
