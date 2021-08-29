@@ -12,6 +12,17 @@ Raketa is a fully client-side content management system that can be deployed for
 * (Planned) Blog-style list of pages on the front page and an appropriate way of sorting them using meta data.
 * (Planned) Allow metadata to be ented into pages by the author.
 * (Planned) Customizeable top menu and an optional right-side bar
+* (Planned) Create a system to customize the copyright with options for Creative Commons licenses.
+
+## Installation
+
+Download the files for Raketa to the location of your site.  In the root of the installation, create `config.js` and define any variables to customize your site.
+
+At a minimum you should define the following variables:
+
+`cgSitename = 'Your site name';`
+`cgOwner = 'Your name or username';`
+`cgCopyrightYear = '2021';`
 
 ## Known issues
 
@@ -19,11 +30,23 @@ Raketa is a fully client-side content management system that can be deployed for
 
 ## Customizing Raketa
 
+### Adding small code changes without a new theme or plugin
+
+The file `user.css` can be used to add styles or make changes without creating a new theme.  All styles applied here will be added over the current theme.
+
+Small JavaScript code features can be added to `config.js` since it is a fully functional JavaScript file.
+
 ### Creating a new theme
 
 In order to create a theme, you need to create a directory inside the `themes` directory with the name of your theme and inside of there a file with the same name ending in `.css`.  The directory and file must have the same name and however the name is written will be the name of your theme.  If you aren't experienced with CSS then I suggest that you copy the directory of an existing theme and change the names of the directory and file to whatever you want.  Doing this will give you a starting point from which you can modify the theme however you like.
 
 Once you have a functional theme you can edit `config.js` and set the variable `cgTheme` to the name of your theme so it will be used on your site.
+
+### Creating a new plugin
+
+To create a new plugin, decide on a name for your plugin and create a directory under the `plugins` directory with that name followed by a file inside it with the same name and ending in `.js`.  Write the code of your plugin in that file.
+
+After creating or downloading a plugin, go to `config.js` and add `cfLoadPlugin('PluginName');` to install the plugin.
 
 ## Consideration
 

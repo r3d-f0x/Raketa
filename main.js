@@ -32,11 +32,24 @@ cgCssLink.href = 'themes/' + cgTheme + '/' + cgTheme + '.css';
 cgCssLink.media = 'all';
 cgDocHead.appendChild(cgCssLink);
 
+// Add user configurable CSS
+var cgUserCSS = document.createElement('link');
+cgUserCSS.id = 'userCSS';
+cgUserCSS.rel = 'stylesheet';
+cgUserCSS.type = 'text/css';
+cgUserCSS.href = 'user.css';
+cgUserCSS.media = 'all';
+cgDocHead.appendChild(cgUserCSS);
+
 // Add the site name to #titleHeading at the top of the page
 document.getElementById('titleHeading').innerHTML = cgSitename;
 
 // Insert homepage link
 document.getElementById('topHomeLink').innerHTML = '<a href="' + cgWebPath + '">' + cgHomeLinkText + '</a>';
+
+// Refresh the copyright notice after loading config.js variables
+// This will be changed after adding options for Creative Commons licensing.
+cgCopyright = 'Copyright © ' + cgOwner + ' ' + cgCopyrightYear + '. All rights reserved.';
 
 // This function generates the homepage of the site
 function generateHomepage() {
@@ -59,7 +72,8 @@ var cgPageFooter = '<div id="footerColLeft" class="column-float-left">\
     <span id="pwrByLine">Powered by Raketa</span><br>\
     <span id="crtByLine">Created by r3d_f0x and contributors</span><br>\
     <span id="dwnFromLine"><a href="https://github.com/r3d-f0x/Raketa">Download from Github to power your own creation!\
-    </a></span>\
+    </a></span><br>\
+    <span id="copyrightLine">' + cgCopyright + '</span>\
     </div>\
     <div id="footerColRight" class="column-float-right">\
     <p class="footerColP">Raketa is a powerful tool to easily create your websites using markdown.  It operates \

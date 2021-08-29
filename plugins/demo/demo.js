@@ -1,1 +1,3 @@
-document.getElementById('pageFooter').appendChild('<p>This is a demo plugin.</p>');
+var cgNewPtag = document.createElement('p');
+cgNewPtag.innerHTML = 'This is a demo plugin.';
+document.getElementById('mainColumn').appendChild(cgNewPtag);
